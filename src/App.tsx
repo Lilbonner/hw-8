@@ -3,14 +3,8 @@ import Navbar from "./Container/Navbar/Navbar.tsx";
 import {Route, Routes} from "react-router-dom";
 import Edit from "./Container/Edit.tsx";
 import Quotes from "./Container/Quotes.tsx";
-
-function NewQuotes() {
-    return null;
-}
-
-function Category() {
-    return null;
-}
+import NewQuote from "./Container/NewQuote.tsx";
+import Category from "./Container/Category.tsx";
 
 function App() {
 
@@ -20,7 +14,7 @@ function App() {
         <div>
             <Routes>
                 <Route path="/" element={<Quotes/>}/>
-                <Route path="/NewQuotes" element={<NewQuotes />} />
+                <Route path="/NewQuote" element={<NewQuote />} />
                 <Route path="/category/:categoryId" element={<Category/>}/>
                 <Route path="/:id/EditQuote" element={<Edit/>} />
             </Routes>
