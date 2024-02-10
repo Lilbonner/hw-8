@@ -15,13 +15,13 @@ const NewQuotes = () => {
 
         axios.post('https://plovo-js-default-rtdb.europe-west1.firebasedatabase.app/quotes.json', newQuote)
             .then(response => {
-                console.log('Цитата успешно отправлена!', response.data);
+                console.log('The quote has been successfully edited!', response.data);
                 setCategory('');
                 setAuthor('');
                 setText('');
             })
             .catch(error => {
-                console.error('Ошибка при отправке цитаты:', error);
+                console.error('Error while editing a quote:', error);
             });
     };
 
